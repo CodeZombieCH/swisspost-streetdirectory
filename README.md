@@ -1,5 +1,7 @@
 # Swiss Post - Street Directory
 
+[![Nuget](https://img.shields.io/nuget/v/SwissPost.StreetDirectory)](https://www.nuget.org/packages/SwissPost.StreetDirectory/)
+
 EN: A .NET Standard class library for the "Street directory with sorting data" CSV file provided by the Swiss Post
 
 DE: Eine .NET Standard Programmbibliothek für die "Strassenverzeichnis mit Sortierdaten" CSV Datei der Schweizerischen Post
