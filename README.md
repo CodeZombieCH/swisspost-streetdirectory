@@ -37,7 +37,9 @@ var provider = new Provider();
 var repository = await provider.Read(reader);
 
 // Use the data from the repository, e.g.:
-Console.WriteLine(repository.NEW_HEA);
+Console.WriteLine($"REC_ART: {repository.NEW_HEA.REC_ART}, VDAT: {repository.NEW_HEA.VDAT}, ZCODE: {repository.NEW_HEA.ZCODE}");
+// Should print:
+// REC_ART: 00, VDAT: 21.09.2020 00:00:00, ZCODE: 12448
 ```
 
 
