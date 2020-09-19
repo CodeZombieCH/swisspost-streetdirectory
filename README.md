@@ -47,7 +47,7 @@ Console.WriteLine($"REC_ART: {repository.NEW_HEA.REC_ART}, VDAT: {repository.NEW
 
 Be aware that the encoding described by the official documentation is wrong.
 
-```
+```bash
 $ file Post_Adressdaten20200908.csv
 Post_Adressdaten20200908.csv: ISO-8859 text, with CRLF line terminators
 ```
@@ -56,12 +56,11 @@ If the documentation states:
  - `ASCII`, the actual encoding is `ISO-8859-1`
  - `UTF-8`, the actual encoding is `ISO-8859-1`
 
-You can either convert to original file to `UTF-8`
+You can either read it as `ISO-8859-1` or convert the original file to `UTF-8`:
 
-    iconv -c -f ISO-8859-1 -t utf-8 Post_Adressdaten20200908.csv > Post_Adressdaten20200908.utf8.csv
-
-or read it as `ISO-8859-1`
-
+```bash
+$ iconv -c -f ISO-8859-1 -t utf-8 Post_Adressdaten20200908.csv > Post_Adressdaten20200908.utf8.csv
+```
 
 ## Scripts
 
