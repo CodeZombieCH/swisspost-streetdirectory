@@ -15,6 +15,8 @@ namespace SwissPost.StreetDirectoryTests
     [TestClass()]
     public class ProviderTests
     {
+        private const string BasePath = @"..\..\..\..\..\..\swisspost-streetdirectory-data\";
+
         [TestMethod]
         public async Task Read_NEW_HEA_Test()
         {
@@ -446,7 +448,7 @@ namespace SwissPost.StreetDirectoryTests
         public async Task Read_All_From_Zip_20200707_Test()
         {
             // Arrange
-            using var archive = ZipFile.OpenRead(@"..\..\..\..\..\data\Post_Adressdaten-20200707.zip");
+            using var archive = ZipFile.OpenRead(@BasePath + @"Post_Adressdaten-20200707.zip");
             var entry = archive.Entries.Single(e => e.FullName.StartsWith("Post_Adressdaten") && e.FullName.EndsWith(".csv"));
 
             // The official documentation about the encoding states:
@@ -484,7 +486,7 @@ namespace SwissPost.StreetDirectoryTests
         public async Task Read_All_From_Zip_20200804_Test()
         {
             // Arrange
-            using var archive = ZipFile.OpenRead(@"..\..\..\..\..\data\Post_Adressdaten-20200804.zip");
+            using var archive = ZipFile.OpenRead(@BasePath + @"Post_Adressdaten-20200804.zip");
             var entry = archive.Entries.Single(e => e.FullName.StartsWith("Post_Adressdaten") && e.FullName.EndsWith(".csv"));
 
             // The official documentation about the encoding states:
@@ -522,7 +524,7 @@ namespace SwissPost.StreetDirectoryTests
         public async Task Read_All_From_Zip_20200908_Test()
         {
             // Arrange
-            using var archive = ZipFile.OpenRead(@"..\..\..\..\..\data\Post_Adressdaten-20200908.zip");
+            using var archive = ZipFile.OpenRead(@BasePath + "Post_Adressdaten-20200908.zip");
             var entry = archive.Entries.Single(e => e.FullName.StartsWith("Post_Adressdaten") && e.FullName.EndsWith(".csv"));
 
             // The official documentation about the encoding states:
